@@ -33,7 +33,7 @@
 
 -ifdef(S2_DEBUG).
 -define(debug(Msg),            ?debug(Msg, [])).
--define(debug(Fmt, As),        ?do_debug("~p:~s:~p: Debug: " Fmt "~n",
+-define(debug(Fmt, As),        ?do_debug("~p:~s:~p: Debug: " Fmt,
                                          [self(), ?FILE, ?LINE|As])).
 -else.
 -define(debug(Msg),            ok).
@@ -41,25 +41,25 @@
 -endif. %S2_DEBUG
 
 -define(info(Msg),             ?info(Msg, [])).
--define(info(Fmt, As),         ?do_info("~p:~s:~p: Info: " Fmt "~n",
+-define(info(Fmt, As),         ?do_info("~p:~s:~p: Info: " Fmt,
                                         [self(), ?FILE, ?LINE|As])).
 -define(notice(Msg),           ?notice(Msg, [])).
--define(notice(Fmt, As),       ?do_notice("~p:~s:~p: Notice: " Fmt "~n",
+-define(notice(Fmt, As),       ?do_notice("~p:~s:~p: Notice: " Fmt,
                                           [self(), ?FILE, ?LINE|As])).
 -define(warning(Msg),          ?warning(Msg, [])).
--define(warning(Fmt, As),      ?do_warning("~p:~s:~p: Warning: " Fmt "~n",
+-define(warning(Fmt, As),      ?do_warning("~p:~s:~p: Warning: " Fmt,
                                            [self(), ?FILE, ?LINE|As])).
 -define(error(Msg),            ?error(Msg, [])).
--define(error(Fmt, As),        ?do_error("~p:~s:~p: Error: " Fmt "~n",
+-define(error(Fmt, As),        ?do_error("~p:~s:~p: Error: " Fmt,
                                          [self(), ?FILE, ?LINE|As])).
 -define(critical(Msg),         ?critical(Msg, [])).
--define(critical(Fmt, As),     ?do_critical("~p:~s:~p: Critical: " Fmt "~n",
+-define(critical(Fmt, As),     ?do_critical("~p:~s:~p: Critical: " Fmt,
                                             [self(), ?FILE, ?LINE|As])).
 -define(alert(Msg),            ?alert(Msg, [])).
--define(alert(Fmt, As),        ?do_alert("~p:~s:~p: Alert: " Fmt "~n",
+-define(alert(Fmt, As),        ?do_alert("~p:~s:~p: Alert: " Fmt,
                                          [self(), ?FILE, ?LINE|As])).
 -define(emergency(Msg),        ?emergency(Msg, [])).
--define(emergency(Fmt, As),    ?do_emergency("~p:~s:~p: Emergency: " Fmt "~n",
+-define(emergency(Fmt, As),    ?do_emergency("~p:~s:~p: Emergency: " Fmt,
                                              [self(), ?FILE, ?LINE|As])).
 
 -ifdef(S2_NOLOG).
